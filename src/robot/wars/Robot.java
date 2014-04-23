@@ -1,5 +1,7 @@
 package robot.wars;
 
+
+
 /**
  *
  * @author Tim Harshman
@@ -9,14 +11,15 @@ public class Robot {
     private String name;
     private boolean shield = false;
     private boolean weapon = false;
+    public String[] weapons;//Create a list of weapons that the robots can have
     
-    
-    public Robot(){
+    public Robot(){//default constructor sets life to 100      
         this.life = 100;
         this.name = "No name yet.";
     }
     
     public Robot(String a){
+        this.weapons = new String[3];
         this.name = a;
         this.life = 100;
     }

@@ -16,6 +16,11 @@ public class RobotWars {
         goteamtim.attack(monaLisa);
         goteamtim.displayStats();
         monaLisa.displayStats();
+        monaLisa.attack(goteamtim);
+        monaLisa.attack(goteamtim);
+        goteamtim.displayStats();
+        monaLisa.displayStats();
+        
         
         
     }
