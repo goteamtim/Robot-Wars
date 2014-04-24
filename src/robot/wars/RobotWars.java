@@ -29,13 +29,14 @@ public class RobotWars {
         robotName = keyboard.next();//Collect user robot name
         Robot player1 = new Robot(robotName);//assign user robot
         System.out.println("Choose your weapon.");
-        for(String i : Robot.weapons){//Display weapon choices
-            int a = 0;
-            System.out.println(a+" "+i);
-            a++;
+        
+        for(int i = 0;i<Robot.weapons.length;i++){//Display weapon choices
+            System.out.println(i+" "+Robot.weapons[i]);
         }
         
         weaponChoice = keyboard.nextInt();
+        player1.setWeapon(weaponChoice);
+        
         Robot goteamtim = new Robot("MogDroid");
         Robot monaLisa = new Robot("Mona Lisa");
         
