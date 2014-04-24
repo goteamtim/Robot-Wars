@@ -11,6 +11,8 @@ public class RobotWars {
         
         Robot goteamtim = new Robot("MogDroid");
         Robot monaLisa = new Robot("Mona Lisa");
+        String[] che = new String[2];
+        che[0] = "";
         
         goteamtim.setWeapon();
         goteamtim.attack(monaLisa);
