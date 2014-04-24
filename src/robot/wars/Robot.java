@@ -11,7 +11,7 @@ public class Robot {
     private String name;
     private boolean shield = false;
     private boolean weapon = false;
-    private String activeWeapon;
+    private int activeWeapon;//Active weapon holds the index in the array of weapons.  Easier to call what weapon the robot currently holds
     
     public static String[] weapons = {
     "Cannon","Axe","Spike"};//Create a list of weapons that the robots can have
@@ -29,7 +29,7 @@ public class Robot {
     
     public Robot(String a, int b){
         this.name = a;
-        this.activeWeapon = weapons[b];
+        this.activeWeapon = b;//
     }
     
     public void attack(Robot a){
