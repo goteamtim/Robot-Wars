@@ -65,8 +65,17 @@ public class Robot {
         this.shield = true;
     }
     
-    public void setWeapon(){
-        this.weapon = true;
-        System.out.println(this.name+" picked up a weapon!");
+    public void setWeapon(int a){
+        if(a>=0 && a<=2){//Check for active weapon choice
+            this.activeWeapon = a;
+            this.weapon = true;
+            System.out.println(this.name+" picked up a weapon!");
+        }
+        else{
+            System.out.println("Weapon choice invalid, setting your weapon to "+weapons[0]+".");
+            this.activeWeapon = 0;
+            this.weapon = true;
+        }
+        
     }
 }

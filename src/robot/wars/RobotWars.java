@@ -11,6 +11,7 @@ public class RobotWars {
 
     public static void main(String[] args) {
         String robotName;
+        int weaponChoice;
         
         System.out.println("Welcome to Robot Wars\n");
         System.out.println("        [ ]");
@@ -25,16 +26,20 @@ public class RobotWars {
 
         Scanner keyboard = new Scanner(System.in);
         System.out.println("Please enter the name of your robot.");
-        robotName = keyboard.next();
-        Robot player1 = new Robot(robotName);
+        robotName = keyboard.next();//Collect user robot name
+        Robot player1 = new Robot(robotName);//assign user robot
+        System.out.println("Choose your weapon.");
+        for(String i : Robot.weapons){//Display weapon choices
+            int a = 0;
+            System.out.println(a+" "+i);
+            a++;
+        }
         
-        
+        weaponChoice = keyboard.nextInt();
         Robot goteamtim = new Robot("MogDroid");
         Robot monaLisa = new Robot("Mona Lisa");
-        String[] che = new String[2];
-        che[0] = "";
         
-        goteamtim.setWeapon();
+        goteamtim.setWeapon(1);
         goteamtim.attack(monaLisa);
         goteamtim.displayStats();
         monaLisa.displayStats();
