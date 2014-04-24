@@ -29,7 +29,15 @@ public class Robot {
     
     public Robot(String a, int b){
         this.name = a;
-        this.activeWeapon = b;//
+        if(b>=0 && b<=2){//Check for active weapon choice
+            this.activeWeapon = b;
+            this.weapon = true;
+        }
+        else{
+            System.out.println("Weapon choice invalid, setting your weapon to "+weapons[0]+".");
+            this.activeWeapon = 0;
+            this.weapon = true;
+        }
     }
     
     public void attack(Robot a){
