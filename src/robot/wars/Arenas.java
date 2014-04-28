@@ -10,5 +10,21 @@ package robot.wars;
  * @author Goteamtim
  */
 public class Arenas {
+    private int length;
+    private int height;
+    //Idea here would be to have different sized arenas
+    //and create boards based on 2d arrays
     
+    public Arenas(int x, int y){
+        length = x;
+        height = y;
+    }
+    
+    public int getLength(){
+        return length;
+    }
+    
+    public int getHeight(){
+        return height;
+    }
 }
