@@ -78,4 +78,9 @@ public class Robot {
         }
         
     }
+	
+	public String toString(){
+		String currentRobot = "Name: "+this.name+"\n"+"Life: "+this.life+"\n";
+		return currentRobot;
+	}
 }
