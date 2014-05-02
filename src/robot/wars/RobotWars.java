@@ -40,15 +40,25 @@ public class RobotWars {
         Robot goteamtim = new Robot("MogDroid");
         Robot monaLisa = new Robot("Mona Lisa");
         
-        goteamtim.setWeapon(1);
-        goteamtim.attack(monaLisa);
-        goteamtim.displayStats();
-        monaLisa.displayStats();
-        monaLisa.attack(goteamtim);
-        monaLisa.attack(goteamtim);
-        goteamtim.displayStats();
-        monaLisa.displayStats();
-        
+        // goteamtim.setWeapon(1);
+        // goteamtim.attack(monaLisa);
+        // goteamtim.displayStats();
+        // monaLisa.displayStats();
+        // monaLisa.attack(goteamtim);
+        // monaLisa.attack(goteamtim);
+        // goteamtim.displayStats();
+        // monaLisa.displayStats();
+        while(goteamtim.getLife() > 0 && monaLisa.getLife() >0){
+			int j = math.rand();
+			int p = j%2;
+			if(p==0){
+				goteamtim.attack(monaLisa);
+			}else{
+				monaLisa.attack(goteamtim);
+			}
+			goteamtim.displayStats();
+			monaLisa.displayStats();
+		}
         
         
     }
