@@ -49,8 +49,8 @@ public class RobotWars {
         // goteamtim.displayStats();
         // monaLisa.displayStats();
         while(goteamtim.getLife() > 0 && monaLisa.getLife() >0){
-			int j = math.rand();
-			int p = j%2;
+			double j = Math.random();
+			double p = j%2;
 			if(p==0){
 				goteamtim.attack(monaLisa);
 			}else{
